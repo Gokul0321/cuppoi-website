@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function CoffeeCollection() {
@@ -11,7 +14,13 @@ export default function CoffeeCollection() {
         <div className="grid md:grid-cols-3 gap-8">
 
           {/* Arabica */}
-          <div className="bg-[#1c1c1c] rounded-2xl overflow-hidden transition duration-300 hover:scale-105">
+          <motion.div
+            className="bg-[#1c1c1c] rounded-2xl overflow-hidden hover:scale-105 transition duration-300"
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
             <Image
               src="/images/arabica.jpg"
               alt="Arabica Coffee"
@@ -38,14 +47,20 @@ export default function CoffeeCollection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-yellow-600 px-4 py-2 rounded-lg hover:bg-yellow-500 transition"
-                >   
+              >
                 Buy Now
-            </a>
+              </a>
             </div>
-          </div>
+          </motion.div>
 
           {/* Robusta */}
-          <div className="bg-[#1c1c1c] rounded-2xl overflow-hidden transition duration-300 hover:scale-105">
+          <motion.div
+            className="bg-[#1c1c1c] rounded-2xl overflow-hidden hover:scale-105 transition duration-300"
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             <Image
               src="/images/robusta.jpg"
               alt="Robusta Coffee"
@@ -72,14 +87,20 @@ export default function CoffeeCollection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-yellow-600 px-4 py-2 rounded-lg hover:bg-yellow-500 transition"
-                >   
+              >
                 Buy Now
-            </a>
+              </a>
             </div>
-          </div>
+          </motion.div>
 
           {/* Filter Coffee */}
-          <div className="bg-[#1c1c1c] rounded-2xl overflow-hidden transition duration-300 hover:scale-105">
+          <motion.div
+            className="bg-[#1c1c1c] rounded-2xl overflow-hidden hover:scale-105 transition duration-300"
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
             <Image
               src="/images/hero.jpg"
               alt="Filter Coffee"
@@ -106,11 +127,11 @@ export default function CoffeeCollection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-yellow-600 px-4 py-2 rounded-lg hover:bg-yellow-500 transition"
-                >   
+              >
                 Buy Now
-            </a>
+              </a>
             </div>
-          </div>
+          </motion.div>
 
         </div>
       </div>
