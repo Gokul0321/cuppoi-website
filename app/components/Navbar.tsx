@@ -14,93 +14,117 @@ export default function Navbar() {
 
     window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-black/95 backdrop-blur-md py-2 shadow-lg"
-          : "bg-black/40 backdrop-blur-sm py-4"
+          ? "bg-black/90 backdrop-blur-xl border-b border-white/10"
+          : "bg-black/30 backdrop-blur-md"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
 
-        {/* Logo */}
-        <a href="#home" className="flex items-center">
-          <Image
-            src="/images/logo.png"
-            alt="Cuppoi"
-            width={160}
-            height={60}
-            priority
-            className="h-auto w-auto max-h-14"
-          />
-        </a>
-
-        {/* Desktop Menu */}
-        <div className="hidden md:flex gap-8 text-sm font-medium">
-          <a
-            href="#home"
-            className="hover:text-yellow-500 transition duration-300"
-          >
-            Home
+          {/* Logo */}
+          <a href="#home" className="flex items-center">
+            <Image
+              src="/images/logo.png"
+              alt="Cuppoi"
+              width={180}
+              height={70}
+              priority
+              className="h-auto w-auto max-h-16"
+            />
           </a>
 
-          <a
-            href="#coffee"
-            className="hover:text-yellow-500 transition duration-300"
-          >
-            Coffee
-          </a>
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center gap-8 text-sm font-medium">
+            <a
+              href="#home"
+              className="hover:text-yellow-500 transition duration-300"
+            >
+              Home
+            </a>
 
-          <a
-            href="#about"
-            className="hover:text-yellow-500 transition duration-300"
-          >
-            About
-          </a>
+            <a
+              href="#coffee"
+              className="hover:text-yellow-500 transition duration-300"
+            >
+              Coffee
+            </a>
 
-          <a
-            href="#contact"
-            className="hover:text-yellow-500 transition duration-300"
+            <a
+              href="#about"
+              className="hover:text-yellow-500 transition duration-300"
+            >
+              About
+            </a>
+
+            <a
+              href="#contact"
+              className="hover:text-yellow-500 transition duration-300"
+            >
+              Contact
+            </a>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden text-3xl text-white"
+            onClick={() => setMenuOpen(!menuOpen)}
           >
-            Contact
-          </a>
+            {menuOpen ? "✕" : "☰"}
+          </button>
         </div>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-2xl"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          {menuOpen ? "✕" : "☰"}
-        </button>
       </div>
 
       {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="md:hidden bg-black/95 backdrop-blur-md px-6 pb-6 pt-4 flex flex-col gap-4 text-center">
-          <a href="#home" onClick={() => setMenuOpen(false)}>
-            Home
-          </a>
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 ${
+          menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="bg-black/20 backdrop-blur-xl border-t border-white/10 px-8 py-8">
+          <div className="flex flex-col items-center gap-8 text-xl font-medium">
 
-          <a href="#coffee" onClick={() => setMenuOpen(false)}>
-            Coffee
-          </a>
+            <a
+              href="#home"
+              onClick={() => setMenuOpen(false)}
+              className="hover:text-yellow-500 transition"
+            >
+              Home
+            </a>
 
-          <a href="#about" onClick={() => setMenuOpen(false)}>
-            About
-          </a>
+            <a
+              href="#coffee"
+              onClick={() => setMenuOpen(false)}
+              className="hover:text-yellow-500 transition"
+            >
+              Coffee
+            </a>
 
-          <a href="#contact" onClick={() => setMenuOpen(false)}>
-            Contact
-          </a>
+            <a
+              href="#about"
+              onClick={() => setMenuOpen(false)}
+              className="hover:text-yellow-500 transition"
+            >
+              About
+            </a>
+
+            <a
+              href="#contact"
+              onClick={() => setMenuOpen(false)}
+              className="hover:text-yellow-500 transition"
+            >
+              Contact
+            </a>
+
+          </div>
         </div>
-      )}
+      </div>
     </nav>
   );
 }
