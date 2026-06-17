@@ -5,6 +5,7 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
 import Testimonials from "./components/Testimonials";
+import WhyChoose from "./components/WhyChoose";
 import Image from "next/image";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <CoffeeCollection />
+      <WhyChoose />
       <Testimonials />
       <About/>
       <Footer/>

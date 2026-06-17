@@ -28,3 +28,13 @@ body {
 html {
   scroll-behavior: smooth;
 }
+body {
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+.logo-text {
+  font-family: var(--font-heading);
+}
