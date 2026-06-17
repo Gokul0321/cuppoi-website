@@ -14,9 +14,39 @@ const bodyFont = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Cuppoi | Kerala Specialty Coffee",
+  title: "Cuppoi | Premium Kerala Coffee",
+
   description:
-    "Premium Kerala coffee crafted from the finest Arabica and Robusta beans.",
+    "Single-estate Kerala coffee crafted from carefully selected Arabica and Robusta beans. Freshly roasted and delivered across India.",
+
+  keywords: [
+    "Cuppoi",
+    "Kerala Coffee",
+    "Premium Coffee",
+    "Arabica Coffee",
+    "Robusta Coffee",
+    "Filter Coffee",
+    "South Indian Coffee",
+    "Specialty Coffee",
+  ],
+
+  authors: [
+    {
+      name: "Cuppoi",
+    },
+  ],
+
+  openGraph: {
+    title: "Cuppoi | Premium Kerala Coffee",
+    description:
+      "Freshly roasted Kerala coffee crafted for unforgettable moments.",
+    siteName: "Cuppoi",
+    type: "website",
+  },
+
+  icons: {
+    icon: "/images/logo.png",
+  },
 };
 
 export default function RootLayout({
@@ -29,7 +59,7 @@ export default function RootLayout({
       lang="en"
       className={`${headingFont.variable} ${bodyFont.variable}`}
     >
-      <body className="bg-black text-white">
+      <body className="bg-black text-white min-h-screen">
         {children}
       </body>
     </html>
