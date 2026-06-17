@@ -42,10 +42,29 @@ export const metadata: Metadata = {
       "Freshly roasted Kerala coffee crafted for unforgettable moments.",
     siteName: "Cuppoi",
     type: "website",
+
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Cuppoi Premium Kerala Coffee",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Cuppoi | Premium Kerala Coffee",
+    description:
+      "Freshly roasted Kerala coffee crafted for unforgettable moments.",
+    images: ["/og-image.jpg"],
   },
 
   icons: {
     icon: "/images/logo.png",
+    shortcut: "/images/logo.png",
+    apple: "/images/logo.png",
   },
 };
 
