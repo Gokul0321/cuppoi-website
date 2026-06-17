@@ -38,3 +38,6 @@ h3,
 .logo-text {
   font-family: var(--font-heading);
 }
+html {
+  scroll-behavior: smooth;
+}

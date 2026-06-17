@@ -6,6 +6,8 @@ import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
 import Testimonials from "./components/Testimonials";
 import WhyChoose from "./components/WhyChoose";
+import BrewingPromise from "./components/BrewingPromise";
+import FAQ from "./components/FAQ";
 import Image from "next/image";
 
 export default function Home() {
@@ -17,7 +19,9 @@ export default function Home() {
       <CoffeeCollection />
       <WhyChoose />
       <Testimonials />
+      <BrewingPromise />
       <About/>
+      <FAQ />
       <Footer/>
       <WhatsAppButton />
     </main>

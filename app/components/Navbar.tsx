@@ -33,10 +33,12 @@ export default function Navbar() {
             <Image
               src="/images/logo.png"
               alt="Cuppoi"
-              width={180}
-              height={70}
-              priority
-              className="h-auto w-auto max-h-16"
+             width={220}
+height={80}
+priority
+className="h-auto w-auto max-h-20"
+              
+              // className="h-auto w-auto max-h-16"
             />
           </a>
 

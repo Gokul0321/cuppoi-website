@@ -1,33 +1,49 @@
-export default function Footer() {
-  return (
-    <footer
-      id="contact"
-      className="bg-black border-t border-gray-800 py-10 px-6"
-    >
-      <div className="max-w-6xl mx-auto">
+"use client";
 
-        <div className="grid md:grid-cols-3 gap-8">
+import { motion } from "framer-motion";
+import Image from "next/image";
+
+export default function Footer() {
+    return (
+  <motion.footer
+    id="contact"
+    className="relative overflow-hidden"
+    initial={{ opacity: 0, y: 40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.7 }}
+  >
+      <div className="max-w-7xl mx-auto px-8 py-12">
+
+        <div className="grid md:grid-cols-[2fr_1fr_1fr] gap-16 items-start">
 
           {/* Brand */}
-          <div>
-            <h2 className="text-3xl text-yellow-600 mb-3">
-              Cuppoi
-            </h2>
+          <div className="flex flex-col">
 
-            <p className="text-gray-400 leading-relaxed max-w-sm">
+            <Image
+              src="/images/logo.png"
+              alt="Cuppoi"
+              width={240}
+              height={90}
+              className="mb-5"
+            />
+
+            <p className="text-gray-400 leading-relaxed max-w-md text-base">
               Premium Kerala coffee crafted from carefully selected
-              Arabica and Robusta beans, roasted for rich flavour
-              and unforgettable moments.
+              Arabica and Robusta beans, roasted to create rich
+              flavour and unforgettable coffee moments.
             </p>
+
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl mb-4">
+            <h3 className="text-xl mb-6 text-white">
               Quick Links
             </h3>
 
-            <div className="flex flex-col gap-2 text-gray-400">
+            <div className="flex flex-col gap-3 text-gray-400">
+
               <a
                 href="#home"
                 className="hover:text-yellow-500 transition"
@@ -55,16 +71,17 @@ export default function Footer() {
               >
                 Contact
               </a>
+
             </div>
           </div>
 
           {/* Contact */}
           <div>
-            <h3 className="text-xl mb-4">
+            <h3 className="text-xl mb-6 text-white">
               Connect With Us
             </h3>
 
-            <div className="flex flex-col gap-2 text-gray-400">
+            <div className="flex flex-col gap-3 text-gray-400">
 
               <a
                 href="https://wa.me/919497093752"
@@ -84,25 +101,28 @@ export default function Footer() {
                 Instagram
               </a>
 
-              <a
-                href="mailto:hello@cuppoi.com"
-                className="hover:text-yellow-500 transition"
-              >
-                hello@cuppoi.com
-              </a>
+              <span>
+                Kerala, India
+              </span>
 
             </div>
           </div>
 
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-4">
-          <p className="text-center text-gray-500 text-sm">
-            © 2026 Cuppoi. All Rights Reserved.
+          {/* Divider */}
+        <div className="border-t border-gray-800 mt-10 pt-5">
+          <p className="text-center text-gray-500 text-xs tracking-wide">
+            © 2026 Cuppoi. Crafted in Kerala. All Rights Reserved.
           </p>
         </div>
 
+        
+
       </div>
-    </footer>
+      
+      
+    </motion.footer>
+    
   );
 }

@@ -24,28 +24,45 @@ export default function WhyChoose() {
   ];
 
   return (
-    <motion.section
-      className="py-24 px-8 bg-black"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: true }}
-    >
+    <section className="py-24 px-8 bg-black">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-5xl font-bold mb-4 tracking-wide">
-          Why Coffee Lovers Choose Cuppoi
-        </h2>
 
-        <p className="text-gray-400 mb-16 max-w-2xl mx-auto">
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl md:text-5xl font-bold mb-4 tracking-wide"
+        >
+          Why Coffee Lovers Choose Cuppoi
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-gray-400 mb-16 max-w-2xl mx-auto"
+        >
           Crafted with care from Kerala's finest coffee-growing regions,
           delivering premium quality in every cup.
-        </p>
+        </motion.p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
           {features.map((item, index) => (
             <motion.div
               key={index}
-              whileHover={{ y: -10 }}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.15,
+              }}
+              whileHover={{
+                y: -8,
+              }}
               className="relative h-[300px] rounded-3xl overflow-hidden group cursor-pointer shadow-2xl"
             >
               <Image
@@ -55,17 +72,18 @@ export default function WhyChoose() {
                 className="object-cover transition duration-700 group-hover:scale-110"
               />
 
-              <div className="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition" />
+              <div className="absolute inset-0 bg-black/55 group-hover:bg-black/35 transition duration-500" />
 
               <div className="absolute inset-0 flex items-end justify-center p-6">
-                <h3 className="text-2xl font-bold text-white">
+                <h3 className="text-2xl font-bold text-white text-center">
                   {item.title}
                 </h3>
               </div>
             </motion.div>
           ))}
+
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 }
