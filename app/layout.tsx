@@ -59,7 +59,7 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "https://cuppoi-website.vercel.app/images/og-image.jpg",
+        url: "https://cuppoi-website.vercel.app/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Cuppoi Premium Kerala Coffee",
