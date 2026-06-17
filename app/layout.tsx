@@ -14,6 +14,10 @@ const bodyFont = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    "https://cuppoi-website.vercel.app"
+  ),
+
   title: "Cuppoi | Premium Kerala Coffee",
 
   description:
@@ -36,16 +40,26 @@ export const metadata: Metadata = {
     },
   ],
 
+  alternates: {
+    canonical:
+      "https://cuppoi-website.vercel.app",
+  },
+
   openGraph: {
     title: "Cuppoi | Premium Kerala Coffee",
+
     description:
       "Freshly roasted Kerala coffee crafted for unforgettable moments.",
+
+    url: "https://cuppoi-website.vercel.app",
+
     siteName: "Cuppoi",
+
     type: "website",
 
     images: [
       {
-        url: "/og-image.jpg",
+        url: "https://cuppoi-website.vercel.app/images/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Cuppoi Premium Kerala Coffee",
@@ -55,10 +69,15 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
+
     title: "Cuppoi | Premium Kerala Coffee",
+
     description:
       "Freshly roasted Kerala coffee crafted for unforgettable moments.",
-    images: ["/og-image.jpg"],
+
+    images: [
+      "https://cuppoi-website.vercel.app/images/og-image.jpg",
+    ],
   },
 
   icons: {
