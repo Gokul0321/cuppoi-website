@@ -34,9 +34,9 @@ export default function Navbar() {
               src="/images/logo.png"
               alt="Cuppoi"
              width={220}
-height={80}
-priority
-className="h-auto w-auto max-h-20"
+            height={80}
+            priority
+            className="h-auto w-auto max-h-20"
               
               // className="h-auto w-auto max-h-16"
             />

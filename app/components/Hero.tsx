@@ -63,7 +63,7 @@ export default function Hero() {
             href="#coffee"
             className="bg-yellow-600 px-8 py-3 rounded-lg hover:scale-105 transition"
           >
-            Shop Coffee
+            Explore Collection
           </a>
 
           <a

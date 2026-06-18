@@ -45,47 +45,35 @@ export const metadata: Metadata = {
       "https://cuppoi-website.vercel.app",
   },
 
-  openGraph: {
-    title: "Cuppoi | Premium Kerala Coffee",
+openGraph: {
+  title: "Cuppoi | Premium Kerala Coffee",
+  description:
+    "Freshly roasted Kerala coffee crafted for unforgettable moments.",
+  url: "https://cuppoi-website.vercel.app",
+  siteName: "Cuppoi",
+  type: "website",
 
-    description:
-      "Freshly roasted Kerala coffee crafted for unforgettable moments.",
+  images: [
+    {
+      url: "https://cuppoi-website.vercel.app/og-image.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Cuppoi Premium Kerala Coffee",
+    },
+  ],
+},
 
-    url: "https://cuppoi-website.vercel.app",
+twitter: {
+  card: "summary_large_image",
+  title: "Cuppoi | Premium Kerala Coffee",
+  description:
+    "Freshly roasted Kerala coffee crafted for unforgettable moments.",
 
-    siteName: "Cuppoi",
-
-    type: "website",
-
-    images: [
-      {
-        url: "https://cuppoi-website.vercel.app/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Cuppoi Premium Kerala Coffee",
-      },
-    ],
-  },
-
-  twitter: {
-    card: "summary_large_image",
-
-    title: "Cuppoi | Premium Kerala Coffee",
-
-    description:
-      "Freshly roasted Kerala coffee crafted for unforgettable moments.",
-
-    images: [
-      "https://cuppoi-website.vercel.app/images/og-image.jpg",
-    ],
-  },
-
-  icons: {
-    icon: "/images/logo.png",
-    shortcut: "/images/logo.png",
-    apple: "/images/logo.png",
-  },
-};
+  images: [
+    "https://cuppoi-website.vercel.app/og-image.jpg",
+  ],
+},
+}
 
 export default function RootLayout({
   children,

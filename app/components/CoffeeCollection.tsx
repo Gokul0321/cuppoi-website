@@ -33,9 +33,6 @@ export default function CoffeeCollection() {
               <h3 className="text-2xl font-semibold mb-2">
                 Arabica
               </h3>
-              <h4> 
-                 Smooth & Aromatic
-              </h4>
 
               <p className="text-gray-400">
                 Smooth, aromatic and naturally sweet.
